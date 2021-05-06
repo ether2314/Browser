@@ -1,0 +1,34 @@
+<resources>
+    <string name="app_name">ETHER BROWSER</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="version_update">Version_Update</string>
+    <string name="version_updates">Version_details</string>
+    <string name="search_button">Go</string>
+    <string name="hint_searchbar">search or type web address</string>
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <string name="share">share</string>
+    <string name="what_s_new">what\'s new</string>
+    <string name="settings">settings</string>
+    <string name="version_name">V.1.0.0</string>
+    <string name="ver_news">-Added new icons
+        \nAdded functionality to forward and BackWard Button
+        \n Will rearrange Main Page ToolBar
+        \n Adding Functionality to Home Button
+        \n will implement Bookmark fragment/add bookmark
+
+    </string>
+
+</resources>
