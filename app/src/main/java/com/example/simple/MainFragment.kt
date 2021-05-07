@@ -9,6 +9,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.webkit.WebViewClient
+import androidx.activity.addCallback
 import androidx.annotation.RequiresApi
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
@@ -20,6 +21,10 @@ class MainFragment : Fragment() {
 
     var share_url:String? = null
 
+
+
+
+
     @SuppressLint("RestrictedApi")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -29,6 +34,12 @@ class MainFragment : Fragment() {
         val binding : FragmentMainBinding = DataBindingUtil.inflate(
             inflater,R.layout.fragment_main,container, false
         )
+
+
+
+
+
+
 
 
 
@@ -102,6 +113,8 @@ class MainFragment : Fragment() {
             webview.settings.javaScriptEnabled = true
             webview.canGoBack()
             webview.canGoForward()
+
+            
 
 
 

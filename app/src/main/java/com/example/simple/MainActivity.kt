@@ -26,6 +26,7 @@ class MainActivity : AppCompatActivity() {
 
 
 
+
         val navController = this.findNavController(R.id.my_nav_host_fragment)
 
         NavigationUI.setupWithNavController(binding.navView, navController)
@@ -33,6 +34,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
 
 }
