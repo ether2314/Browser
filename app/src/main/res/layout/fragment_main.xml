@@ -39,8 +39,7 @@
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    >
+                    android:layout_height="match_parent">
 
                     <androidx.constraintlayout.widget.ConstraintLayout
                         android:id="@+id/search_layout"
@@ -55,8 +54,8 @@
 
                         <EditText
                             android:id="@+id/edit"
-                            android:layout_width="286dp"
-                            android:layout_height="53dp"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
                             android:layout_weight="4"
                             android:background="@android:color/white"
                             android:gravity="left"
@@ -77,7 +76,7 @@
                         <ImageButton
                             android:id="@+id/btn"
                             android:layout_width="40dp"
-                            android:layout_height="47dp"
+                            android:layout_height="0dp"
                             android:layout_weight="0"
                             android:background="@color/purple_200"
                             android:gravity="center"
@@ -89,14 +88,14 @@
                             android:textSize="15sp"
                             app:layout_constraintBottom_toBottomOf="parent"
                             app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.83"
+                            app:layout_constraintHorizontal_bias="1.0"
                             app:layout_constraintStart_toStartOf="parent"
                             app:layout_constraintTop_toTopOf="parent"
                             app:layout_constraintVertical_bias="0.333" />
 
 
                     </androidx.constraintlayout.widget.ConstraintLayout>
-            </androidx.cardview.widget.CardView>
+                </androidx.cardview.widget.CardView>
 
             </androidx.appcompat.widget.Toolbar>
 
@@ -105,6 +104,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_weight="7"
+                android:visibility="gone"
                 app:layout_constraintBottom_toTopOf="@+id/toolbar2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -129,86 +129,155 @@
                 app:layout_constraintHorizontal_bias="0.0"
                 app:layout_constraintStart_toStartOf="parent">
 
-                <androidx.cardview.widget.CardView
+                <androidx.constraintlayout.widget.ConstraintLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    app:cardBackgroundColor="#72222020"
-                    tools:layout_editor_absoluteX="16dp">
-
-                    <androidx.constraintlayout.widget.ConstraintLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent">
+                    android:layout_height="wrap_content"
+                    tools:layout_editor_absoluteX="16dp"
+                    tools:layout_editor_absoluteY="7dp">
 
 
-                        <ImageView
-                            android:id="@+id/home_btn"
-                            android:layout_width="27dp"
-                            android:layout_height="19dp"
-                            android:onClick="goHome"
-                            android:src="@drawable/ic_baseline_home_24"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/bck_btn"
-                            app:layout_constraintHorizontal_bias="0.566"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.538" />
+                    <ImageView
+                        android:id="@+id/home_btn"
+                        android:layout_width="33dp"
+                        android:layout_height="33dp"
+                        android:onClick="goHome"
+                        android:src="@drawable/ic_baseline_home_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/bck_btn"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.538" />
 
-                        <ImageView
-                            android:id="@+id/bck_btn"
-                            android:layout_width="47dp"
-                            android:layout_height="40dp"
-                            android:layout_marginEnd="20dp"
+                    <ImageView
+                        android:id="@+id/bck_btn"
+                        android:layout_width="47dp"
+                        android:layout_height="40dp"
 
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_arrow_left"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/reload_btn"
-                            app:layout_constraintHorizontal_bias="0.889"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_arrow_left"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/reload_btn"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/home_btn"
+                        app:layout_constraintTop_toTopOf="parent" />
 
-                        <ImageView
+                    <ImageView
 
-                            android:id="@+id/reload_btn"
-                            android:layout_width="51dp"
-                            android:layout_height="38dp"
-                            android:layout_marginEnd="8dp"
+                        android:id="@+id/reload_btn"
+                        android:layout_width="51dp"
+                        android:layout_height="38dp"
 
 
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_baseline_refresh_24"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toStartOf="@+id/for_btn"
-                            app:layout_constraintHorizontal_bias="0.969"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.538" />
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_baseline_refresh_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toStartOf="@+id/for_btn"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/bck_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.538" />
 
-                        <ImageView
-                            android:id="@+id/for_btn"
-                            android:layout_width="50dp"
-                            android:layout_height="42dp"
+                    <ImageView
+                        android:id="@+id/for_btn"
+                        android:layout_width="50dp"
+                        android:layout_height="42dp"
 
-                            android:gravity="center"
-                            android:padding="10dp"
-                            android:src="@drawable/ic_baseline_arrow_forward_24"
-                            app:layout_constraintBottom_toBottomOf="parent"
-                            app:layout_constraintEnd_toEndOf="parent"
-                            app:layout_constraintHorizontal_bias="0.696"
-                            app:layout_constraintStart_toStartOf="parent"
-                            app:layout_constraintTop_toTopOf="parent"
-                            app:layout_constraintVertical_bias="0.538" />
-                    </androidx.constraintlayout.widget.ConstraintLayout>
-
-                </androidx.cardview.widget.CardView>
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:src="@drawable/ic_baseline_arrow_forward_24"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.5"
+                        app:layout_constraintStart_toEndOf="@+id/reload_btn"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.538" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
 
 
             </androidx.appcompat.widget.Toolbar>
 
+            <LinearLayout
+                android:id="@+id/mai1"
+                android:layout_width="0dp"
+                android:layout_height="0dp"
+                android:orientation="vertical"
+                app:layout_constraintBottom_toTopOf="@+id/toolbar2"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/toolbar"
+                android:background="@drawable/backg"
+                >
 
-        </androidx.constraintlayout.widget.ConstraintLayout>
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-    </RelativeLayout>
-</layout>
+                    <LinearLayout
+                        android:layout_width="408dp"
+                        android:layout_height="55dp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintHorizontal_bias="0.0"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintVertical_bias="0.193">
+
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:id="@+id/fb_btn"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+
+                                android:src="@drawable/facebook"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/twi_btn"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/naira_btn"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+
+                                android:src="@drawable/naira"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/twi_btn"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+                            <ImageView
+                                android:id="@+id/twi_btn"
+                                android:layout_width="50dp"
+                                android:layout_height="50dp"
+
+                                android:src="@drawable/twitter"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintEnd_toStartOf="@+id/naira_btn"
+                                app:layout_constraintHorizontal_bias="0.5"
+                                app:layout_constraintStart_toEndOf="@+id/fb_btn"
+                                app:layout_constraintTop_toTopOf="parent" />
+
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+                    </LinearLayout>
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                    </LinearLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </RelativeLayout>
+
+
+        </layout>

@@ -11,6 +11,7 @@ import android.view.ViewGroup
 import android.webkit.WebViewClient
 import androidx.activity.addCallback
 import androidx.annotation.RequiresApi
+import androidx.core.view.isVisible
 import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
 import androidx.navigation.findNavController
@@ -113,8 +114,9 @@ class MainFragment : Fragment() {
             webview.settings.javaScriptEnabled = true
             webview.canGoBack()
             webview.canGoForward()
+            webview.isVisible = true
+            binding.mai1.isVisible= false
 
-            
 
 
 

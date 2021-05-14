@@ -2,7 +2,10 @@
 buildscript {
     ext {
         kotlin_version = "1.4.31"
-        navigationVersion = "2.3.5"}
+        navigationVersion = "2.3.5"
+        room_version = "2.2.6"
+        work_version = "1.0.1"
+    }
     repositories {
         google()
         jcenter()
