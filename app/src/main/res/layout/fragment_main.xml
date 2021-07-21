@@ -5,19 +5,22 @@
     >
 
     <data>
+        <variable
+            name="mainfragmentviewmodel"
+            type="com.example.simple.mainp.MainFragmentViewModel" />
 
     </data>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".MainFragment">
+        tools:context=".mainp.MainFragment">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:orientation="vertical"
-            tools:context=".MainActivity">
+            >
 
 
             <androidx.appcompat.widget.Toolbar
@@ -51,6 +54,19 @@
 
                         >
 
+                        <TextView
+                            android:id="@+id/edited_text"
+                            android:layout_width="0dp"
+                            android:layout_height="0dp"
+                            android:visibility="gone"
+                            android:text="@{@string/quote_format(mainfragmentviewmodel.url)}"
+                            app:layout_constraintBottom_toBottomOf="@+id/edit"
+                            app:layout_constraintEnd_toStartOf="@+id/btn"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent" />
+
+
+
 
                         <EditText
                             android:id="@+id/edit"
@@ -81,8 +97,6 @@
                             android:background="@color/purple_200"
                             android:gravity="center"
                             android:src="@drawable/ic_baseline_search_24"
-
-
                             android:text="@string/search_button"
                             android:textColor="@android:color/darker_gray"
                             android:textSize="15sp"
@@ -105,6 +119,7 @@
                 android:layout_height="0dp"
                 android:layout_weight="7"
                 android:visibility="gone"
+
                 app:layout_constraintBottom_toTopOf="@+id/toolbar2"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="0.0"
@@ -140,7 +155,6 @@
                         android:id="@+id/home_btn"
                         android:layout_width="33dp"
                         android:layout_height="33dp"
-                        android:onClick="goHome"
                         android:src="@drawable/ic_baseline_home_24"
                         app:layout_constraintBottom_toBottomOf="parent"
                         app:layout_constraintEnd_toStartOf="@+id/bck_btn"
@@ -179,6 +193,8 @@
                         app:layout_constraintStart_toEndOf="@+id/bck_btn"
                         app:layout_constraintTop_toTopOf="parent"
                         app:layout_constraintVertical_bias="0.538" />
+
+
 
                     <ImageView
                         android:id="@+id/for_btn"
@@ -233,7 +249,6 @@
                                 android:id="@+id/fb_btn"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-
                                 android:src="@drawable/facebook"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/twi_btn"
@@ -257,7 +272,6 @@
                                 android:id="@+id/twi_btn"
                                 android:layout_width="50dp"
                                 android:layout_height="50dp"
-
                                 android:src="@drawable/twitter"
                                 app:layout_constraintBottom_toBottomOf="parent"
                                 app:layout_constraintEnd_toStartOf="@+id/naira_btn"
@@ -272,12 +286,11 @@
                     </LinearLayout>
                 </androidx.constraintlayout.widget.ConstraintLayout>
 
-                    </LinearLayout>
+            </LinearLayout>
 
-                </androidx.constraintlayout.widget.ConstraintLayout>
-
-
-            </RelativeLayout>
+        </androidx.constraintlayout.widget.ConstraintLayout>
 
 
-        </layout>
+    </RelativeLayout>
+
+</layout>

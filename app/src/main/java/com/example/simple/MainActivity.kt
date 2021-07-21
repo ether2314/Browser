@@ -2,6 +2,7 @@ package com.example.simple
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.view.menu.MenuPopupHelper
 import androidx.databinding.DataBindingUtil
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.navigation.findNavController
@@ -35,6 +36,7 @@ class MainActivity : AppCompatActivity() {
 
 
     }
+
 
 
 

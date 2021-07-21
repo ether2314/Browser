@@ -9,6 +9,8 @@
 
     <merge tools:context=".MainActivity">
 
+
+
         <androidx.drawerlayout.widget.DrawerLayout
             android:id="@+id/drawerLayout"
             android:layout_width="match_parent"
